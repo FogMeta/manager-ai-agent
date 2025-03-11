@@ -10,17 +10,20 @@ It enables users to **interact with blockchain data, manage their wallets, execu
 ### **1️⃣ Basic Wallet Operations**
 - **Check wallet balance** → `/balance`
 - **View transaction history** → `/history`
-- **Send tokens** → `/send 10 APT to 0xABC123...`
-- **View NFT assets** → `/nft`
-- **Interact with DeFi protocols** → `/deposit 50 APT to Joule`
+- **Send tokens** → `/send 10 APT to 0xABC123...` 
+- ** Add APTOS wallet address to monitor** 
+
+- **View NFT assets** → `/nft`[**_Coming Soon_**]
+- **Interact with DeFi protocols** → `/deposit 50 APT to Joule` [**_Coming Soon_**]
 
 ### **2️⃣ On-Chain Data Analysis**
-- **Retrieve DeFi data** (TVL, liquidity, APR)
-- **Monitor NFT market trends** (minting volume, floor price changes)[coming soon]
 - **Track whale wallets** (large buy/sell activities)
+- **Retrieve DeFi data** (TVL, liquidity, APR) [**_Coming Soon_**]
+- **Monitor NFT market trends** (minting volume, floor price changes)[**_Coming Soon_**]
 
 ### **3️⃣ Automated Social Media Posting**
-- **Generate Twitter/X posts**
+- **Generate Twitter/X posts** 
+  - APTOS price/TVL/FDV up or down > 5% 
   - 🔥 *"XYZ NFT trading volume surged +200%!"*
   - 📊 *"Joule Finance TVL increased by 15%, liquidity booming!"*
 - **Post updates to Telegram **
@@ -33,7 +36,7 @@ It enables users to **interact with blockchain data, manage their wallets, execu
 ## **Technical Architecture**
 | Module               | Technology Stack |
 |----------------------|-----------------|
-| **Wallet Operations** | Aptos SDK, Move |
+| **Wallet Operations** | move-agent-kit, Move |
 | **On-Chain Data Retrieval** | Aptos API, The Graph |
 | **AI Social Media Generator** | LLM, LangGraph |
 | **Automated Posting** | Twitter API, Telegram Bot|
