@@ -43,7 +43,7 @@ It enables users to **interact with blockchain data, manage their wallets, execu
 
 ---
 
-## **User Interaction Flow**
+## **User Interaction Flow**[**Coming Soon**]
 1️⃣ **Connect Wallet** → `/connect_wallet`  
 2️⃣ **Check Balance & Send Tokens** → `/balance`, `/send`  
 3️⃣ **Retrieve On-Chain Data** → `/market-trend`, `/whale-watch`  
