@@ -6,7 +6,7 @@ export default function Home() {
     <div className="p-4 md:p-6 rounded text-center w-full max-h-[85%] overflow-hidden">
       <h1 className="text-1xl md:text-2xl mb-4 flex items-center justify-center">
         <Image src="/logo-small.png" alt="Logo" width={32} height={32} />
-        <span className="ml-4">Manager AI Agent</span>
+        <b className="ml-4">Manager AI Agent</b>
       </h1>
       <h1 className="text-subtitle mb-4 flex items-center justify-center">
         How can I help you today?

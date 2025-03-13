@@ -183,17 +183,17 @@ export function ChatWindow(props: {
       className={`flex body-style ${messages.length > 0 ? '' : 'items-center'}`}
     >
       <div
-        className={`flex flex-col items-center p-4 md:p-8 rounded grow overflow-hidden`}
+        className={`flex flex-col items-center p-4 md:p-6 rounded grow overflow-hidden`}
       >
         <h2
           className={`${
             messages.length > 0 ? 'flex items-center' : 'hidden'
-          } text-2xl`}
+          } text-xl`}
         >
           <Image src="/logo-small.png" alt="Logo" width={24} height={24} />
-          <span className="ml-4">
+          <b className="ml-4">
             {emoji} {titleText}
-          </span>
+          </b>
         </h2>
         {messages.length === 0 ? emptyStateComponent : ''}
         <div

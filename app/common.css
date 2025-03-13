@@ -4,7 +4,7 @@
 
 .chat-container {
   padding: 0.625rem;
-  background-color: #404045;
+  background-color: #f3f4f6;
   border-radius: 1.5rem;
 }
 
@@ -26,24 +26,24 @@
 }
 
 .chat-container textarea::-webkit-scrollbar-track {
-  background: #2c2c2c; 
+  background: #eaeaea; 
 }
 
 .chat-container textarea::-webkit-scrollbar-thumb {
-  background: #9f9f9f; 
+  background: #cdcdcd; 
   border-radius: 1rem;
 }
 
 .chat-container textarea::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: #eaeaea;
 }
 
 .chart-send {
   width: 2rem;
   height: 2rem;
-  background-color: #71717a;
+  background-color: #d8dee7;
   border-radius: 10rem;
-  color: #4b4b5b;
+  color: #fff;
 }
 
 .chart-send.highlight {
@@ -56,13 +56,13 @@
 }
 
 .bg-primary-user {
-  background-color: #414158;
+  background-color: #f0f6fe;
   border-radius: 10rem;
 }
 
 .bg-primary-system {
   background-color: transparent;
-  border: 1px solid rgba(204, 233, 255, 0.2);
+  border: 2px solid #f5f5f5;
   border-radius: 1.5rem;
 }
 
@@ -135,4 +135,5 @@
 
 .text-subtitle {
   font-size: 1rem;
+  color: #414141;
 }
