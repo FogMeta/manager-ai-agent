@@ -6,15 +6,12 @@ import { createReactAgent } from "@langchain/langgraph/prebuilt"
 import { Message as VercelChatMessage } from "ai"
 import { AgentRuntime, LocalSigner, createAptosTools } from "move-agent-kit"
 import { NextResponse } from "next/server"
-
 import { ChatOpenAI, OpenAIClient } from "@langchain/openai";
 
-
-// const llm = new ChatAnthropic({
-// 	temperature: 0.7,
-// 	model: "claude-3-5-sonnet-latest",
-// 	apiKey: process.env.ANTHROPIC_API_KEY,
-// })
+import {AptosWalletBalanceTool} from "../../../utils/apt_wallet_balance"
+import {AptosPriceChangeTool} from "../../../utils/apt_increase_ratio"
+import {AptosVolumeTool} from "../../../utils/apt_volume"
+import {AptosTVLTool} from "../../../utils/apt_tvl"
 
 const client = new OpenAIClient({
     baseURL: "https://inference.nebulablock.com/v1",  
@@ -33,26 +30,6 @@ const llm = new ChatOpenAI({
     modelName: "meta-llama/Llama-3.3-70B-Instruct",
     model: "meta-llama/Llama-3.3-70B-Instruct",
 });
-
-// const client = new OpenAIClient({
-//     baseURL: "https://ark.ap-southeast.bytepluses.com/api/v3",  
-//     apiKey: "ed3d5a72-24a9-4d7c-a6fd-1ac21f5752cf",
-// });
-
-// const llm = new ChatOpenAI({
-//     configuration: {
-//         baseURL: client.baseURL,
-//         apiKey: client.apiKey,
-//         defaultHeaders: {
-// 			"enable-auto-tool-choice": "true",
-// 			"tool-call-parser": "true",
-// 		},
-//     },
-//     modelName: "ep-20250305122339-kfpst",
-//     model: "ep-20250305122339-kfpst",
-// });
-
-
 
 const textDecoder = new TextDecoder()
 
@@ -135,7 +112,12 @@ export async function POST(request: Request) {
 		const aptosAgent = new AgentRuntime(signer, aptos, {
 			PANORA_API_KEY: process.env.PANORA_API_KEY,
 		})
-		const tools = createAptosTools(aptosAgent)
+		
+		const tools = [...createAptosTools(aptosAgent), 
+			new AptosWalletBalanceTool(aptosAgent),
+			 new AptosTVLTool(aptosAgent),
+			 new AptosVolumeTool(aptosAgent),
+			 new AptosPriceChangeTool(aptosAgent)]
 		const memory = new MemorySaver()
 
 		// Create React agent
