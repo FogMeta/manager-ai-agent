@@ -1,0 +1,138 @@
+.body-style {
+  min-height: 100vh;
+}
+
+.chat-container {
+  padding: 0.625rem;
+  background-color: #404045;
+  border-radius: 1.5rem;
+}
+
+.chat-container input {
+  background-color: transparent;
+  outline: none;
+}
+
+.chat-container textarea {
+  background-color: transparent;
+  outline: none;
+  min-height: 2.5rem; 
+  max-height: 21rem;
+  resize: none;
+}
+
+.chat-container textarea::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+.chat-container textarea::-webkit-scrollbar-track {
+  background: #2c2c2c; 
+}
+
+.chat-container textarea::-webkit-scrollbar-thumb {
+  background: #9f9f9f; 
+  border-radius: 1rem;
+}
+
+.chat-container textarea::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.chart-send {
+  width: 2rem;
+  height: 2rem;
+  background-color: #71717a;
+  border-radius: 10rem;
+  color: #4b4b5b;
+}
+
+.chart-send.highlight {
+  background-color: rgba(77, 106, 254, 1);
+  color: #fff;
+}
+
+.chart-send.highlight:hover {
+  background-color: rgba(77, 106, 254, 0.8);
+}
+
+.bg-primary-user {
+  background-color: #414158;
+  border-radius: 10rem;
+}
+
+.bg-primary-system {
+  background-color: transparent;
+  border: 1px solid rgba(204, 233, 255, 0.2);
+  border-radius: 1.5rem;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.share-none {
+  display: none;
+}
+
+.share-show {
+  display: flex;
+}
+
+.share-show .icon {
+  cursor: pointer;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.share-icon {
+  margin-left: 48px;
+}
+
+.show-img {
+  width: 32px;
+  height: 32px;
+  margin: 5px 16px 5px 0;
+}
+
+.show-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.modal-share {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-share-content {
+  width: 60%;
+  min-width: 320px;
+  padding: 1rem 1.5rem;
+  background-color: #383f4d;
+  border-radius: 2rem;
+  color: #fff;
+}
+
+.modal-share-content button {
+  padding: 0.25rem 1rem;
+  background-color: rgba(77, 106, 254, 1);
+  border-radius: 1.5rem;
+  color: #fff;
+}
+
+.modal-share-content button.btn-close {
+  background-color: #50505a;
+}
+
+.text-subtitle {
+  font-size: 1rem;
+}
