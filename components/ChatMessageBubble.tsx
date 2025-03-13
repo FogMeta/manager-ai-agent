@@ -70,7 +70,7 @@ export function ChatMessageBubble(props: {
   return (
     <div className="flex flex-wrap">
       <div className={`${shareClassName} show-img flex`}>
-        <Image src="/logo-small.png" alt="Logo" width={32} height={32} />
+        <Image src="/logo.png" alt="Logo" width={32} height={32} />
       </div>
       <div
         className={`${alignmentClassName} ${colorClassName} rounded px-4 py-2 max-w-[80%] flex`}
@@ -109,7 +109,7 @@ export function ChatMessageBubble(props: {
           )}
         </div>
       </div>
-      <div className={`${shareClassName} w-100 mb-2`}>
+      {/* <div className={`${shareClassName} w-100 mb-2`}>
         <div className="flex items-center share-icon" onClick={fetchData}>
           <svg
             className="icon mr-2"
@@ -132,7 +132,7 @@ export function ChatMessageBubble(props: {
             ></path>
           </svg>
         </div>
-      </div>
+      </div> */}
 
       {isModalOpen && (
         <div className="modal-share">

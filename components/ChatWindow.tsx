@@ -190,10 +190,10 @@ export function ChatWindow(props: {
             messages.length > 0 ? 'flex items-center' : 'hidden'
           } text-xl`}
         >
-          <Image src="/logo-small.png" alt="Logo" width={24} height={24} />
-          <b className="ml-4">
+          {/* <b className="ml-4">
             {emoji} {titleText}
-          </b>
+          </b> */}
+          <Image src="/logo_text.png" alt="Logo" width={146} height={50} />
         </h2>
         {messages.length === 0 ? emptyStateComponent : ''}
         <div
