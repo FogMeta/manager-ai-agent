@@ -117,9 +117,9 @@
   width: 60%;
   min-width: 320px;
   padding: 1rem 1.5rem;
-  background-color: #383f4d;
+  background-color: #fff;
   border-radius: 2rem;
-  color: #fff;
+  color: #000;
 }
 
 .modal-share-content button {
@@ -130,7 +130,7 @@
 }
 
 .modal-share-content button.btn-close {
-  background-color: #50505a;
+  background-color: #afafaf;
 }
 
 .text-subtitle {
