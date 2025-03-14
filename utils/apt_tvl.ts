@@ -14,7 +14,7 @@ export class AptosTVLTool extends Tool {
 	protected async _call(input: string): Promise<string> {
 		try {
      
-    console.log("input:", input)
+    console.log("AptosTVLTool input:", input)
        // Send a GET request to fetch TVL data
     const response = await axios.get(DEFI_LLAMA_API);
     const data = response.data;

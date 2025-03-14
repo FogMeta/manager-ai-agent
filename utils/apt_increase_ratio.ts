@@ -14,7 +14,7 @@ export class AptosPriceChangeTool extends Tool {
 
   protected async _call(input: string): Promise<string> {
     try {
-      console.log("input:", input)
+      console.log("AptosPriceChangeTool input:", input)
       const response = await axios.get(COINGECKO_API);
       const data = response.data;
 

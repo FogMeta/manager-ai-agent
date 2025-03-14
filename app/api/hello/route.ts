@@ -14,8 +14,8 @@ import {AptosVolumeTool} from "../../../utils/apt_volume"
 import {AptosTVLTool} from "../../../utils/apt_tvl"
 
 const client = new OpenAIClient({
-    baseURL: "https://inference.nebulablock.com/v1",  
-    apiKey: "sk-CuuB677iOeR15xCPeAlzcw",
+    baseURL: process.env.LLM_API_BASE,  
+    apiKey: process.env.LLM_API_KEY,
 });
 
 const llm = new ChatOpenAI({
@@ -27,8 +27,7 @@ const llm = new ChatOpenAI({
 			"tool-call-parser": "true",
 		},
     },
-    modelName: "meta-llama/Llama-3.3-70B-Instruct",
-    model: "meta-llama/Llama-3.3-70B-Instruct",
+    model: process.env.LLM_MODEL,
 });
 
 const textDecoder = new TextDecoder()

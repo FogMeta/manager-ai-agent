@@ -13,7 +13,7 @@ export class AptosWalletBalanceTool extends Tool {
 	protected async _call(input: string): Promise<string> {
 		try {
       const APTOS_API_URL = "https://api.devnet.aptoslabs.com/v1";
-      console.log("input:", input)
+      console.log("AptosWalletBalanceTool input:", input)
       const walletAddress = input
 			const url = `${APTOS_API_URL}/accounts/${walletAddress}/resources`;
 			// Make a GET request to fetch the wallet resources
