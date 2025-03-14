@@ -1,0 +1,152 @@
+.body-style {
+  min-height: 100vh;
+}
+
+.chat-container {
+  padding: 0.625rem;
+  background-color: #f3f4f6;
+  border-radius: 1.5rem;
+}
+
+.chat-container input {
+  background-color: transparent;
+  outline: none;
+}
+
+.chat-container textarea, .modal-share-content textarea {
+  background-color: transparent;
+  outline: none;
+  min-height: 2.5rem; 
+  max-height: 21rem;
+  resize: none;
+}
+
+.modal-share-content-text {
+  border: 1px solid #afafaf;
+  border-radius: 1rem;
+}
+
+.modal-share-content textarea {
+  width: 100%;
+}
+
+.chat-container textarea::-webkit-scrollbar,
+.modal-share-content textarea::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+.chat-container textarea::-webkit-scrollbar-track,
+.modal-share-content textarea::-webkit-scrollbar-track {
+  background: #eaeaea; 
+}
+
+.chat-container textarea::-webkit-scrollbar-thumb,
+.modal-share-content textarea::-webkit-scrollbar-thumb {
+  background: #cdcdcd; 
+  border-radius: 1rem;
+}
+
+.chat-container textarea::-webkit-scrollbar-thumb:hover,
+.modal-share-content textarea::-webkit-scrollbar-thumb:hover {
+  background: #eaeaea;
+}
+
+.chart-send {
+  width: 2rem;
+  height: 2rem;
+  background-color: #d8dee7;
+  border-radius: 10rem;
+  color: #fff;
+}
+
+.chart-send.highlight {
+  background-color: rgba(234, 70, 114, 1);
+  color: #fff;
+}
+
+.chart-send.highlight:hover {
+  background-color: rgba(234, 70, 114, 0.8);
+}
+
+.bg-primary-user {
+  background-color: #f0f6fe;
+  border-radius: 10rem;
+}
+
+.bg-primary-system {
+  background-color: transparent;
+  border: 2px solid #f5f5f5;
+  border-radius: 1.5rem;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.share-none {
+  display: none;
+}
+
+.share-show {
+  display: flex;
+}
+
+.share-show .icon {
+  cursor: pointer;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.share-icon {
+  margin-left: 48px;
+}
+
+.show-img {
+  width: 32px;
+  height: 32px;
+  margin: 5px 16px 5px 0;
+}
+
+.show-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.modal-share {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-share-content {
+  width: 60%;
+  min-width: 320px;
+  padding: 1rem 1.5rem;
+  background-color: #fff;
+  border-radius: 2rem;
+  color: #000;
+}
+
+.modal-share-content button {
+  padding: 0.25rem 1rem;
+  background-color: rgba(234, 70, 114, 1);
+  border-radius: 1.5rem;
+  color: #fff;
+}
+
+.modal-share-content button.btn-close {
+  background-color: #afafaf;
+}
+
+.text-subtitle {
+  font-size: 1rem;
+  color: #414141;
+}
