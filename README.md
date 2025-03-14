@@ -8,9 +8,9 @@ It enables users to **interact with blockchain data, manage their wallets, execu
 
 ## **Core Features**
 ### **1️⃣ Basic Wallet Operations**
-- **Check wallet balance** → `/balance`
-- **View transaction history** → `/history`
-- **Send tokens** → `/send 10 APT to 0xABC123...` 
+- **Check wallet balance** → `How many APT in my wallet?`
+- **View transaction history** → `What about the transaction 0x1234... `
+- **Send tokens** → `send 10 APT to 0xABC123...` 
 - ** Add APTOS wallet address to monitor** 
 
 - **View NFT assets** → `/nft`[**_Coming Soon_**]
@@ -26,8 +26,6 @@ It enables users to **interact with blockchain data, manage their wallets, execu
   - APTOS price/TVL/FDV up or down > 5% 
   - 🔥 *"XYZ NFT trading volume surged +200%!"*
   - 📊 *"Joule Finance TVL increased by 15%, liquidity booming!"*
-- **Post updates to Telegram **
-  - AI-generated markdown-based news alerts
 - **Real-time Web3 news broadcast**
   - AI analyzes on-chain trends and automatically posts updates
 
