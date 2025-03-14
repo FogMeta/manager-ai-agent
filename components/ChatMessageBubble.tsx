@@ -3,6 +3,8 @@ import type { Message } from 'ai/react'
 import { useMemo } from 'react'
 import React, { useRef, useState } from 'react'
 import Image from 'next/image'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 export function ChatMessageBubble(props: {
   message: Message
@@ -67,11 +69,13 @@ export function ChatMessageBubble(props: {
       }
 
       const result = await response.json()
-      console.log('API Response:', result)
+      // console.log('API Response:', result?.message)
+      toast.success(result.message ?? 'Tweet sent successfully')
 
       setIsModalOpen(false)
-    } catch (error) {
+    } catch (error: any) {
       console.error('Error submitting data:', error)
+      toast.error('Submission failed, please try again.')
     } finally {
       setSubmitLoading(false)
     }
@@ -197,6 +201,7 @@ export function ChatMessageBubble(props: {
           </div>
         </div>
       )}
+      <ToastContainer />
     </div>
   )
 }
