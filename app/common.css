@@ -13,7 +13,7 @@
   outline: none;
 }
 
-.chat-container textarea {
+.chat-container textarea, .modal-share-content textarea {
   background-color: transparent;
   outline: none;
   min-height: 2.5rem; 
@@ -21,20 +21,33 @@
   resize: none;
 }
 
-.chat-container textarea::-webkit-scrollbar {
+.modal-share-content-text {
+  border: 1px solid #afafaf;
+  border-radius: 1rem;
+}
+
+.modal-share-content textarea {
+  width: 100%;
+}
+
+.chat-container textarea::-webkit-scrollbar,
+.modal-share-content textarea::-webkit-scrollbar {
   width: 0.5rem;
 }
 
-.chat-container textarea::-webkit-scrollbar-track {
+.chat-container textarea::-webkit-scrollbar-track,
+.modal-share-content textarea::-webkit-scrollbar-track {
   background: #eaeaea; 
 }
 
-.chat-container textarea::-webkit-scrollbar-thumb {
+.chat-container textarea::-webkit-scrollbar-thumb,
+.modal-share-content textarea::-webkit-scrollbar-thumb {
   background: #cdcdcd; 
   border-radius: 1rem;
 }
 
-.chat-container textarea::-webkit-scrollbar-thumb:hover {
+.chat-container textarea::-webkit-scrollbar-thumb:hover,
+.modal-share-content textarea::-webkit-scrollbar-thumb:hover {
   background: #eaeaea;
 }
 
