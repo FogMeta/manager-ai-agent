@@ -1,7 +1,7 @@
 import markdownToHtml from '@/utils/markdownToHtml'
 import type { Message } from 'ai/react'
 import { useMemo } from 'react'
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import Image from 'next/image'
 
 export function ChatMessageBubble(props: {
@@ -31,12 +31,7 @@ export function ChatMessageBubble(props: {
   const fetchData = async () => {
     try {
       setIsLoading(true)
-      // const response = await fetch('/api/text');
-      // const data = await response.text();
-
-      const data =
-        'In our fast-paced world, it’s easy to overlook the significance of small, consistent actions. However, it’s often these tiny habits that lead to profound changes over time. Whether it’s reading a few pages of a book each day, taking a short walk, or practicing gratitude, small habits can compound into remarkable results.'
-
+      const data = props.message.content
       setApiData(data)
       setIsModalOpen(true)
     } catch (error) {
@@ -46,16 +41,34 @@ export function ChatMessageBubble(props: {
     }
   }
 
+  const handleInputChange = (event: any) => {
+    setApiData(event.target.value)
+  }
+
   const handleSubmit = async () => {
     try {
+      if (!apiData.trim()) {
+        alert('The content cannot be empty!')
+        return
+      }
+
       setSubmitLoading(true)
-      await fetch('/api/submit', {
+
+      const response = await fetch('api/send_tweet', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ data: apiData }),
+        body: JSON.stringify({ content: apiData }),
       })
+
+      if (!response.ok) {
+        throw new Error('Network response was not ok')
+      }
+
+      const result = await response.json()
+      console.log('API Response:', result)
+
       setIsModalOpen(false)
     } catch (error) {
       console.error('Error submitting data:', error)
@@ -66,6 +79,17 @@ export function ChatMessageBubble(props: {
 
   const handleClose = async () => {
     setIsModalOpen(false)
+  }
+
+  const [height, setHeight] = useState('auto')
+  const textareaRef = useRef(null)
+  const maxHeight = 200
+
+  const handleInput = (event: any) => {
+    const textarea: any = textareaRef.current
+    textarea.style.height = 'auto'
+    textarea.style.height = `${Math.min(textarea.scrollHeight, maxHeight)}px`
+    setHeight(textarea.style.height)
   }
 
   return (
@@ -138,7 +162,26 @@ export function ChatMessageBubble(props: {
       {isModalOpen && (
         <div className="modal-share">
           <div className="modal-share-content">
-            <p className="pt-2">{apiData}</p>
+            <h1 className="mt-2 text-xl">Share on Twitter</h1>
+            <div className="modal-share-content-text mt-4 p-2">
+              <textarea
+                ref={textareaRef}
+                style={{
+                  height: height,
+                  maxHeight: `${maxHeight}px`,
+                  overflowY:
+                    parseInt(height) >= maxHeight ? 'scroll' : 'hidden',
+                  resize: 'none',
+                }}
+                rows={2}
+                onInput={handleInput}
+                className="p-2"
+                value={apiData}
+                placeholder={'...'}
+                onChange={handleInputChange}
+              />
+            </div>
+
             <div className="flex items-center justify-center mt-8">
               <button className="btn-close" onClick={handleClose}>
                 Close
