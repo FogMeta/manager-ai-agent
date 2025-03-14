@@ -1,7 +1,7 @@
-# **MoveSocial Agent**
+# **Manager-AI-Agent**
 
 ## **Project Overview**
-**MoveSocial Agent** is an **AI-powered social agent** that integrates **wallet operations, on-chain data analysis, and automated social media posting** to drive Web3 community growth and engagement.  
+**Manager-AI-Agent** is an **AI-powered social agent** that integrates **wallet operations, on-chain data analysis, and automated social media posting** to drive Web3 community growth and engagement.  
 It enables users to **interact with blockchain data, manage their wallets, execute transactions, and automatically generate Web3 insights posts** on **Twitter/X**, helping Web3 projects expand their reach.
 
 ---
